@@ -1,0 +1,5 @@
+[instances]
+test_server = 'i-*************'
+
+[region_name]
+region = 'us-east-1'
