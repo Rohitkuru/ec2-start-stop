@@ -20,7 +20,7 @@ class parse_config:
 class ec2_action:
     def __init__(self,service):
         self.service = service
-        self.conn = boto3.resource(self.service,region_name="ap-southeast-1")
+        self.conn = boto3.resource(self.service,region_name=config.get('region_name','region'))
 
     def list_instances(self,servers):
         try:
