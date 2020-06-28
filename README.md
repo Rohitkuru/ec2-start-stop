@@ -14,7 +14,7 @@ Program provide menu which helps user to easily manage start/stop operation. Mul
 
 How to use:
 
-Program comes with config file , which has following options to configure
+Program comes with config file(ec2-details)  , which has following options to configure (Sample availble)
 
 instances -> Please provide "user friendly" name to instance and unique "instance-id" , separated by each line
 region_name -> Please provide region name where ec2 machines are hosted (e.g. us-east-1) 
