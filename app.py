@@ -12,17 +12,17 @@ class parse_config:
 
 
     def parse_all_servers(self):
-        config = configparser.ConfigParser()
-        config.read(self.filename)
         for y,x in enumerate(config.options('instances'),start=1):
             yield {str(x.encode("utf-8").strip("'")).upper(): [y,config.get('instances', x).encode("utf-8").strip("'")]}
-        region = config.get('region_name','region')
-
+    
+    def parse_region(self):
+        return config.get('region_name','region')
 
 class ec2_action:
-    def __init__(self,service):
+    def __init__(self,service,region):
         self.service = service
-        self.conn = boto3.resource(self.service,region_name=config.get('region_name','region'))
+        self.region = region
+        self.conn = boto3.resource(self.service,region_name=self.region)
 
     def list_instances(self,servers):
         try:
@@ -129,8 +129,10 @@ if __name__ == '__main__':
     logging.basicConfig(filename="logs",format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S',level=logging.INFO,filemode='a')
     logging.info("Execution started ")
     try:
-        read_file_obj = parse_config("ec2_details")
-        ec2_obj = ec2_action('ec2')
+        config = configparser.ConfigParser()
+        config.read("ec2-details")
+        read_file_obj = parse_config("ec2-details")
+        ec2_obj = ec2_action('ec2',read_file_obj.parse_region().strip("'"))
         if read_file_obj.parse_all_servers():
             logging.info("Config file parse successfull and connected to EC2")
         else:
