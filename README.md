@@ -16,7 +16,7 @@ How to use:
 
 Program comes with config file(ec2-details)  , which has following options to configure (Sample availble)
 
-instances -> Please provide "user friendly" name to instance and unique "instance-id" , separated by each line
+instances -> Please provide "user friendly" name to instance and unique "instance-id" , separated by each line.
 region_name -> Please provide region name where ec2 machines are hosted (e.g. us-east-1) 
 IAM ROLE ACCESS -> NO more action require if access will be maintain by IAM ROLE.
 
