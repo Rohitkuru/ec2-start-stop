@@ -23,7 +23,7 @@ IAM ROLE ACCESS -> NO more action require if access will be maintain by IAM ROLE
 Credetials -> Please configure AWS ACCCESS KEY AND AWS SECURITY ACCESS KEY as per normal procedure by AWS.
 
 
-Sample ec2-details file and log file is attached
+Sample ec2-details file  is attached
 
 Logs : -
 
