@@ -18,7 +18,8 @@ Program comes with config file(ec2-details)  , which has following options to co
 
 instances -> Please provide "user friendly" name to instance and unique "instance-id" , separated by each line
 region_name -> Please provide region name where ec2 machines are hosted (e.g. us-east-1) 
-credentials -> Please provide Access key and security access keys or remove this section if you wish to use AWS ROLE for start / stop 
+credentials -> Please provide Access key and security access keys 
+IAM ROLE ACCESS -> Mention YES or NO , if you are using this instead of AWS KEYS
 
 Logs : -
 
