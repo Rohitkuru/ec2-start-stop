@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import boto3
 from six.moves import configparser
 import sys
