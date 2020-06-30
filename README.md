@@ -20,7 +20,7 @@ instances -> Please provide "user friendly" name to instance and unique "instanc
 region_name -> Please provide region name where ec2 machines are hosted (e.g. us-east-1) 
 IAM ROLE ACCESS -> NO more action require if access will be maintain by IAM ROLE.
 
-Credetials -> Please configure AWS ACCCESS KEY AND AWS SECURITY ACCESS KEY as per normal procedure by AWS.
+Credetials -> Please configure AWS ACCCESS KEY AND AWS SECURITY ACCESS KEY using "aws configure" as per normal procedure by AWS.
 
 
 Sample ec2-details file  is attached
